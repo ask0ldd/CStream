@@ -1,0 +1,40 @@
+form {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+form input {
+  height: 50px;
+  margin-bottom: 1.5rem;
+  margin-top: 0.25rem;
+  padding: 0 0.5rem;
+}
+
+form button {
+  height: 40px;
+  width: 132px;
+  background-color: #7763c5;
+  color: #ffffffff;
+  border-radius: 6px;
+  border: none;
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #7763c5cc;
+  box-shadow: 0 4px 8px #7763c555;
+}
+
+form .errorMessage {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 14px;
+  color: #a40f0f;
+  font-weight: bold;
+}
