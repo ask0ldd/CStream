@@ -1,1 +1,15 @@
-<p>register works!</p>
+<main>
+    <img class="backButton" routerLink="/" src="/assets/backarrow.png" alt="backButton">
+    <img class="logo" src="/assets/logo.png" alt="logo" />
+    <h1>Inscription</h1>
+    <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+        <label>Nom d’utilisateur</label>
+        <input type="text" formControlName="username"/>
+        <label>Adresse e-mail</label>
+        <input type="text" formControlName="email"/>
+        <label>Mot de passe</label>
+        <input type="password" formControlName="password"/>
+        <p class="errorMessage" *ngIf="errorMessage != ''">{{errorMessage}}</p>
+        <button type="submit">S’inscrire</button>
+    </form>
+</main>
