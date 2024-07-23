@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ILoginRequest } from 'src/app/interfaces/requests/ILoginRequest';
 
 @Component({
   selector: 'app-login',
@@ -31,7 +32,12 @@ export class LoginComponent {
   constructor(private fb: FormBuilder){ }
 
   onSubmit() : void{
-    
+    if(this.loginForm.valid){
+      const loginRequest = this.loginForm.value as ILoginRequest;
+      // add api login call
+    }else{
+      this.errorMessage = "Your credentials are not valid."
+    }
   }
   
 }

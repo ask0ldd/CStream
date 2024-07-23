@@ -55,6 +55,7 @@ export class RegisterComponent {
 
     if(this.registerForm.valid){
       const registerRequest = this.registerForm.value as IRegisterRequest;
+      // add api register call
     }else{
       if(this.registerForm.get("password")?.status != "VALID") this.errorMessage = "Your password must contain at least one lowercase letter, one uppercase letter, one number, and one special character."
       if(this.registerForm.get("email")?.status != "VALID") this.errorMessage = "The email address provided is not in a recognized format."
