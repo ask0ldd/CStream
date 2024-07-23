@@ -1,13 +1,14 @@
 <main>
     <img class="backButton" routerLink="/" src="/assets/backarrow.png" alt="backButton">
     <img class="logo" src="/assets/logo.png" alt="logo" />
-    <h1>Se Connecter</h1>
+    <h1>Login</h1>
     <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
-        <label>Email ou Nom d’utilisateur</label>
+        <label>Email or Username</label>
         <input type="text" formControlName="emailOrUsername"/>
-        <label>Mot de passe</label>
+        <label>Password</label>
         <input type="password" formControlName="password"/>
         <p *ngIf="errorMessage != ''" class="errorMessage">{{errorMessage}}</p>
-        <button type="submit">Se Connecter</button>
+        <button type="submit">Login -></button>
+        <p>Forgot your password?</p>
     </form>
 </main>
