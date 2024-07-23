@@ -3,12 +3,14 @@
     <img class="logo" src="/assets/logo.png" alt="logo" />
     <h1>Inscription</h1>
     <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
-        <label>Nom d’utilisateur</label>
-        <input type="text" formControlName="username"/>
-        <label>Adresse e-mail</label>
+        <label>Email</label>
         <input type="text" formControlName="email"/>
-        <label>Mot de passe</label>
+        <label>Username</label>
+        <input type="text" formControlName="username"/>
+        <label>Password</label>
         <input type="password" formControlName="password"/>
+        <label>Password Confirmation</label>
+        <input type="password" formControlName="passwordCheck"/>
         <p class="errorMessage" *ngIf="errorMessage != ''">{{errorMessage}}</p>
         <button type="submit">S’inscrire</button>
     </form>
