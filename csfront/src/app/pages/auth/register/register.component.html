@@ -11,7 +11,13 @@
         <input type="password" formControlName="password"/>
         <label>Password Confirmation</label>
         <input type="password" formControlName="passwordCheck"/>
+        <label>Firstname</label>
+        <input type="firstname" formControlName="firstname"/>
+        <label>Lastname</label>
+        <input type="lastname" formControlName="lastname"/>
+        <label>Country</label>
+        <input type="country" formControlName="country"/> <!-- needed for VAT -->
         <p class="errorMessage" *ngIf="errorMessage != ''">{{errorMessage}}</p>
-        <button type="submit">S’inscrire</button>
+        <button type="submit">Create Account</button>
     </form>
 </main>
