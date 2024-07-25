@@ -27,6 +27,30 @@ export class RegisterComponent {
         Validators.pattern("^[a-zA-Z0-9_-]{6,16}$")
       ]
     ],
+    firstname : [
+      '',
+      [
+        Validators.required,
+        Validators.minLength(6),
+        Validators.pattern("^(?=.{3,30}$)[A-Za-z]+(?: [A-Za-z]+)*$")
+      ]
+    ],
+    lastname : [
+      '',
+      [
+        Validators.required,
+        Validators.minLength(6),
+        Validators.pattern("^(?=.{3,30}$)[A-Za-z]+(?: [A-Za-z]+)*$")
+      ]
+    ],
+    country : [
+      '',
+      [
+        Validators.required,
+        Validators.minLength(6),
+        Validators.pattern("^\+?[1-9][0-9]{0,3}$")
+      ]
+    ],
     password: [
       '',
       [
@@ -60,6 +84,9 @@ export class RegisterComponent {
       if(this.registerForm.get("password")?.status != "VALID") this.errorMessage = "Your password must contain at least one lowercase letter, one uppercase letter, one number, and one special character."
       if(this.registerForm.get("email")?.status != "VALID") this.errorMessage = "The email address provided is not in a recognized format."
       if(this.registerForm.get("username")?.status != "VALID") this.errorMessage = "Your username should contain 6 to 16 characters."
+      if(this.registerForm.get("firstname")?.status != "VALID") this.errorMessage = "Your firstname doesn't match our requirements."
+      if(this.registerForm.get("lastname")?.status != "VALID") this.errorMessage = "Your lastname doesn't match our requirements."
+      if(this.registerForm.get("country")?.status != "VALID") this.errorMessage = "Your username should contain 6 to 16 characters."
     }
   }
   
